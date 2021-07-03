@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--https://mkyong.com/spring-boot/spring-boot-log4j-2-example/ -->
+
+<Configuration status="DEBUG">
+    <Appenders>
+        <Console name="LogToConsole" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+        </Console>
+    </Appenders>
+    <Loggers>
+        <Logger name="com.azure.core" level="warn" additivity="false">
+            <AppenderRef ref="LogToConsole"/>
+        </Logger>
+        <Logger name="com.azure.messaging.servicebus" level="warn" additivity="false">
+            <AppenderRef ref="LogToConsole"/>
+        </Logger>
+        <Logger name="com.azure.messaging.servicebus.FluxAutoLockRenew$LockRenewSubscriber" level="off" additivity="false">
+            <AppenderRef ref="LogToConsole"/>
+        </Logger>
+        <Logger name="com.azure.messaging.servicebus.implementation.ServiceBusReceiveLinkProcessor" level="off" additivity="false">
+            <AppenderRef ref="LogToConsole"/>
+        </Logger>
+        <Logger name="com.azure.core.amqp.implementation.RetryUtil" level="off" additivity="false">
+            <AppenderRef ref="LogToConsole"/>
+        </Logger>
+
+        <Logger name="com.example.azureservicebusexample" level="info" additivity="false">
+            <AppenderRef ref="LogToConsole"/>
+        </Logger>
+        <Root level="off">
+            <AppenderRef ref="LogToConsole"/>
+        </Root>
+    </Loggers>
+</Configuration>

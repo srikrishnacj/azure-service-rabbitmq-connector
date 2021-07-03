@@ -1,0 +1,14 @@
+[
+  {
+    "bridgeId": "testInboundBridgeId",
+    "parallel": 1,
+    "rmqConf": {
+      "connectionString": "amqp://test:test@localhost:5672/test",
+      "exchange": "rmq.test.exchange"
+    },
+    "serviceBusConf": {
+      "connectionString": "Endpoint=sb://servicebustestcj.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=DCmTOnIFZyEqUUQhHIGAtLmRgLyfgNn0YpKraP8/L5c=",
+      "queue": "fromazure"
+    }
+  }
+]

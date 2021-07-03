@@ -1,0 +1,10 @@
+https://stackoverflow.com/questions/50817451/which-ports-should-be-open-for-amqp-connection-in-azure-service-bus
+
+RabbitMQ ACK
+https://www.rabbitmq.com/confirms.html#automatic-requeueing
+
+RabbitMQ Multiple Consumers
+https://stackoverflow.com/questions/10620976/rabbitmq-amqp-single-queue-multiple-consumers-for-same-message
+
+RabbitMQ Java Client Guide
+https://www.rabbitmq.com/api-guide.html#uri

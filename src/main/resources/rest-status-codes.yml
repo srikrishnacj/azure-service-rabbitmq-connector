@@ -1,0 +1,58 @@
+# https://www.restapitutorial.com/httpstatuscodes.html
+# do not move this file to some other location. if you move, update the file path in ErrorCtrl.
+
+- status:       200
+  description:  Ok
+
+- status:       201
+  description:  Created
+
+- status:       202
+  description:  Accepted
+  whenToUse:    Request has been accepted but not immediately proccess.
+
+- status:       207
+  description:  Multi-Status code
+  whenToUse:    Partial success for PUT or POST. Some documents succeeded, but at least one failed. Ex when bulk delete request from user, we may be able to delete some documents but not all.
+
+- status:       400
+  description:  Bad Request
+  whenToUse:    try to avoid 400 for validation. for simplicity both syntactical and semantical validation use 422. use 400 only as generic error code and only when no other 4xx code in sutable for your purpose
+  # https://www.quora.com/Which-HTTP-code-is-best-suited-for-validation-errors-400-or-422
+
+- status:       401
+  description:  Unauthorized
+
+- status:       403
+  description:  Forbidden
+
+- status:       404
+  description:  Not Found
+
+- status:       405
+  description:  (Spring) Method Not Allowed
+
+- status:       406
+  description:  (Spring) Not Acceptable
+
+- status:       409
+  description:  Conflict
+  whenToUse:    optimistic locking. we trying to update a document, but document is already update by another user
+
+- status:       415
+  description:  (Spring) Unsupported Media Type
+
+- status:       422
+  description:  Unprocessable Entity
+  whenToUse:    For all validation errors we can use.
+  # https://www.quora.com/Which-HTTP-code-is-best-suited-for-validation-errors-400-or-422
+
+- status:       500
+  description:  Internal Server Error
+
+- status:       501
+  description:  Not Implemented
+  whenToUse:    Api feature is not fully implemented.
+
+- status:       502
+  description:  Bad Gateway

@@ -1,0 +1,33 @@
+#****************************************************************************************
+#           Azure Key Vault Configuration
+#****************************************************************************************
+azure:
+  keyvault:
+    enabled: true
+    uri: https://spring-key-vault.vault.azure.net/
+    tenant-id: 274e7bcc-09e1-4464-8187-eb991bfcf27e
+    client-id: 3cd8cc76-298d-4a71-ab08-283211cf6683
+    client-key: 2fzj8.Z~64hV~mKFZGLL.jL~Di3uitdm9I
+
+
+#****************************************************************************************
+#           Debuggable Rest Response Configuration
+#****************************************************************************************
+application:
+  development:
+    response:
+      stackTrace: true
+      cors: true
+    endpoints:
+      errorctrl: true
+      samplectrl: true
+
+
+#****************************************************************************************
+#           Actuator Configuration
+#****************************************************************************************
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'

@@ -24,7 +24,6 @@ public class ExceptionUtil {
         StringWriter sw = new StringWriter();
         PrintWriter pw = new PrintWriter(sw);
         exception.printStackTrace(pw);
-
         return Arrays.stream(sw.toString().split("\\r?\\n")).collect(Collectors.toList());
     }
 }

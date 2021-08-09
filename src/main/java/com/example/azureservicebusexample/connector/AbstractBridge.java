@@ -20,7 +20,6 @@ public class AbstractBridge implements Bridge {
 
     @Override
     public void start() {
-
         this.consumer.setListener(new ConsumerListener() {
             @Override
             public boolean consume(String messageId, byte[] body) {

@@ -1,7 +1,7 @@
 package com.example.azureservicebusexample.exception;
 
-import lombok.Getter;
 import com.example.azureservicebusexample.apiresponse.restresponse.ErrorRestResponse;
+import lombok.Getter;
 import org.springframework.http.ResponseEntity;
 
 import java.util.Arrays;

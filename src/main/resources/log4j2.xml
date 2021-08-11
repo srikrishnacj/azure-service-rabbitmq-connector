@@ -28,7 +28,10 @@
         <Logger name="com.example.azureservicebusexample" level="info" additivity="false">
             <AppenderRef ref="LogToConsole"/>
         </Logger>
-        <Root level="off">
+        <Logger name="com.example.azureservicebusexample.bridge" level="off" additivity="false">
+            <AppenderRef ref="LogToConsole"/>
+        </Logger>
+        <Root level="INFO">
             <AppenderRef ref="LogToConsole"/>
         </Root>
     </Loggers>

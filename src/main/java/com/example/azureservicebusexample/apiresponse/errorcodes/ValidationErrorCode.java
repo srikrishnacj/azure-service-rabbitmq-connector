@@ -1,7 +1,7 @@
 package com.example.azureservicebusexample.apiresponse.errorcodes;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
 import com.example.azureservicebusexample.apiresponse.errordetail.ErrorDetail;
+import com.fasterxml.jackson.annotation.JsonFormat;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

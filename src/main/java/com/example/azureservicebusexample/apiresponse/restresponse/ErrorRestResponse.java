@@ -1,9 +1,9 @@
 package com.example.azureservicebusexample.apiresponse.restresponse;
 
-import lombok.Getter;
-import lombok.Setter;
 import com.example.azureservicebusexample.apiresponse.errordetail.ErrorDetail;
 import com.example.azureservicebusexample.apiresponse.errordetail.FormErrorDetail;
+import lombok.Getter;
+import lombok.Setter;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 

@@ -1,0 +1,16 @@
+[
+  {
+    "bridgeId": "123456",
+    "source": "SERVICE_BUS",
+    "parallel": 1,
+    "rabbitMqConfig": {
+      "connectionString": "amqp://test:test@localhost:5672/test",
+      "queue": "source.qu",
+      "exchange": "source.ex"
+    },
+    "serviceBusMsgConfig": {
+      "connectionString": "Endpoint=sb://dfafdsfsdfd.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=kzP23rBYRSpD/Uix/cvQLTIumhsEKDmvTTFYDtzECjg=",
+      "queue": "test"
+    }
+  }
+]

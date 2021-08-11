@@ -15,8 +15,10 @@ public class MsgBridge {
     private final MsgBridgeConfig config;
     private final MsgConsumer consumer;
     private final MsgProducer producer;
+    private final String name;
 
-    public MsgBridge(MsgBridgeConfig config, RabbitMqConsumerProperties rabbitMqConsumerProperties, ServiceBusConsumerProperties serviceBusConsumerProperties) {
+    public MsgBridge(String name, MsgBridgeConfig config, RabbitMqConsumerProperties rabbitMqConsumerProperties, ServiceBusConsumerProperties serviceBusConsumerProperties) {
+        this.name = name;
         this.config = config;
         if (config.getSource().equals("SERVICE_BUS")) {
             this.producer = new RabbitMqMsgProducerImpl(config.getRabbitMqConfig());
@@ -45,6 +47,6 @@ public class MsgBridge {
     }
 
     public MsgBridgeStatus status() {
-        return new MsgBridgeStatus(this.producer.status(), this.consumer.status());
+        return new MsgBridgeStatus(this.name, this.producer.status(), this.consumer.status());
     }
 }

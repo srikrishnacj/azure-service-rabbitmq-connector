@@ -1,6 +1,6 @@
 [
   {
-    "bridgeId": "123456",
+    "bridgeId": "TEST-BRIDGE",
     "source": "SERVICE_BUS",
     "parallel": 1,
     "rabbitMqConfig": {

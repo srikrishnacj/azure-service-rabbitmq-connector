@@ -32,7 +32,7 @@ public class MsgBridgeService {
         List<MsgBridgeConfig> msgBridgeConfigs = repo.loadConfig();
         msgBridgeConfigs.stream().forEach(config -> {
             for (int ii = 0; ii < config.getParallel(); ii++) {
-                this.bridges.add(startBridge(config));
+                this.bridges.add(startBridge(config.getBridgeId() + "-" + ii, config));
             }
         });
     }
@@ -41,8 +41,8 @@ public class MsgBridgeService {
         return bridges.stream().map(bridge -> bridge.status()).collect(Collectors.toList());
     }
 
-    private MsgBridge startBridge(MsgBridgeConfig config) {
-        MsgBridge msgBridge = new MsgBridge(config, rabbitMqConsumerProperties, serviceBusConsumerProperties);
+    private MsgBridge startBridge(String name, MsgBridgeConfig config) {
+        MsgBridge msgBridge = new MsgBridge(name, config, rabbitMqConsumerProperties, serviceBusConsumerProperties);
 
         Thread thread = new Thread(() -> {
             msgBridge.start();

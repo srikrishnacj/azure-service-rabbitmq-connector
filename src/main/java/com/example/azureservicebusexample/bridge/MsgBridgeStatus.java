@@ -10,6 +10,7 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 public class MsgBridgeStatus {
+    private String name;
     private MsgProducerStatus producerStatus;
     private MsgConsumerStatus consumerStatus;
 }
